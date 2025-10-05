@@ -1,5 +1,17 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>text (github pages $$$)</h1>
-  </body>
+	<body>
+		<p>seconds until something funny happens:</p>
+		<p id="timer"></p>
+		<img src="cat.gif" />
+		<script>
+			const dateOfTheFunnyHappening = new Date("2025-10-16T18:00:00+02:00").getTime();
+			
+			setInterval(function() {
+				const now = new Date().getTime();
+				const distance = dateOfTheFunnyHappening - now;
+				document.getElementById("timer").innerHTML = Math.floor(distance / 1000);
+			}, 500);
+		</script>
+	</body>
 </html>
